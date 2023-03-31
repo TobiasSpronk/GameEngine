@@ -78,6 +78,8 @@ lectures/
 *.user
 *.userosscache
 *.sln.docstates
+*.sln
+*.vcxproj*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
