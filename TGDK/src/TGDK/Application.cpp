@@ -1,6 +1,7 @@
 #include "Application.h"
 
 
+
 namespace tgdk
 {
 	Application::Application()
@@ -15,6 +16,8 @@ namespace tgdk
 
 	void Application::run()
 	{
+		WindowResizeEvent e(1280, 720);
+		TGDK_TRACE(e);
 		while (true);
 	}
 }

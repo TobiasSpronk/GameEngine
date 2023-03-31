@@ -141,11 +141,17 @@
     <ClInclude Include="src\TGDK.h" />
     <ClInclude Include="src\TGDK\Application.h" />
     <ClInclude Include="src\TGDK\Core.h" />
+    <ClInclude Include="src\TGDK\Core\KeyCodes.h" />
+    <ClInclude Include="src\TGDK\Core\MouseCodes.h" />
     <ClInclude Include="src\TGDK\EntryPoint.h" />
+    <ClInclude Include="src\TGDK\Events\Event.h" />
+    <ClInclude Include="src\TGDK\Events\KeyEvent.h" />
+    <ClInclude Include="src\TGDK\Events\MouseEvent.h" />
     <ClInclude Include="src\TGDK\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\TGDK\Application.cpp" />
+    <ClCompile Include="src\TGDK\Events\ApplicationEvent.h" />
     <ClCompile Include="src\TGDK\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

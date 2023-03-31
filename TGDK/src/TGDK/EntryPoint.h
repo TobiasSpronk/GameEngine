@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	TGDK_INFO("Hello! Var = {0}", a);
 
 
-	printf("Welcome to hazel engine");
+	printf("Welcome to TGDK engine");
 	auto app = tgdk::CreateApplication();
 	app->run();
 	delete app;

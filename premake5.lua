@@ -19,6 +19,7 @@ project "TGDK"
     }
     includedirs
     {
+        "%{prj.name}/src",
         "TGDK/vendor/spdlog/include"
     }
 
