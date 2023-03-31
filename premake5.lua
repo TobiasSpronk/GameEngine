@@ -1,24 +1,25 @@
-workspace "Hazel"
+workspace "TGDK"
     architecture "x64"
     configurations { "Debug", "Release", "Dist" }
-
+	startproject "Sandbox"
 outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Hazel"
-    location "Hazel"
+project "TGDK"
+    location "TGDK"
     kind "SharedLib"
     language "C++"
+	
     targetdir ("bin/" .. outputDir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputDir .. "/%{prj.name}")
 
     files 
     { 
-        "/%{prj.name}/src/**.h", 
-        "/%{prj.name}/src/**.cpp", 
+        "%{prj.name}/src/**.h", 
+        "%{prj.name}/src/**.cpp"
     }
     includedirs
     {
-        "/%{prj.name}/vendor/spdlog/include"
+        "TGDK/vendor/spdlog/include"
     }
 
     filter "system:windows"
@@ -28,25 +29,25 @@ project "Hazel"
 
         defines
         {
-            "HZ_PLATFORM_WINDOWS",
-            "HZ_BUILD_DLL"
+            "TGDK_PLATFORM_WINDOWS",
+            "TGDK_BUILD_DLL"
         }
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/ " .. outputDir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputDir .. "/Sandbox")
         }
     
     filter "configurations:Debug"
-        defines "HZ_DEBUG"
+        defines "TGDK_DEBUG"
         symbols "On"
 
     filter "configurations:Release"
-        defines "HZ_RELEASE"
+        defines "TGDK_RELEASE"
         symbols "On"
 
     filter "configurations:Dist"
-        defines "HZ_DIST"
+        defines "TGDK_DIST"
         symbols "On"
     
    
@@ -59,18 +60,18 @@ project "Sandbox"
 
     files 
     { 
-        "/%{prj.name}/src/**.h", 
-        "/%{prj.name}/src/**.cpp", 
+        "%{prj.name}/src/**.h", 
+        "%{prj.name}/src/**.cpp"
     }
     includedirs
     {
-        "Hazel/vendor/spdlog/include",
-        "Hazel/src"
+        "TGDK/vendor/spdlog/include",
+        "TGDK/src"
     }
 
     links
     {
-        "Hazel"
+        "TGDK"
     }
 
     filter "system:windows"
@@ -80,20 +81,20 @@ project "Sandbox"
 
         defines
         {
-            "HZ_PLATFORM_WINDOWS",
+            "TGDK_PLATFORM_WINDOWS",
         }
 
     
     filter "configurations:Debug"
-        defines "HZ_DEBUG"
+        defines "TGDK_DEBUG"
         symbols "On"
 
     filter "configurations:Release"
-        defines "HZ_RELEASE"
+        defines "TGDK_RELEASE"
         symbols "On"
 
     filter "configurations:Dist"
-        defines "HZ_DIST"
+        defines "TGDK_DIST"
         symbols "On"
 		
 		

@@ -1,7 +1,7 @@
 #include "Application.h"
 
 
-namespace Hazel
+namespace tgdk
 {
 	Application::Application()
 	{

@@ -2,9 +2,9 @@
 
 #include "Core.h"
 
-namespace Hazel
+namespace tgdk
 {
-	class HAZEL_API Application
+	class TGDK_API Application
 	{
 	public:
 		Application();

@@ -1,6 +1,6 @@
-#include "Hazel.h"
+#include "TGDK.h"
 
-class Sandbox : public Hazel::Application
+class Sandbox : public tgdk::Application
 {
 public:
 	Sandbox()
@@ -13,7 +13,7 @@ public:
 	}
 };
 
-Hazel::Application* Hazel::CreateApplication()
+tgdk::Application* tgdk::CreateApplication()
 {
 	return new Sandbox();
 }

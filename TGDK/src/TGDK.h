@@ -1,11 +1,11 @@
 #pragma once
 
-// for use by Hazel applications
+// for use by TGDK applications
 
-#include "Hazel/Application.h"
-#include "Hazel/Log.h"
+#include "TGDK/Application.h"
+#include "TGDK/Log.h"
 #include <cstdio>
 
 // ---------------- Entry Point---------------------//
-#include "Hazel/EntryPoint.h"
+#include "TGDK/EntryPoint.h"
 // ------------------------------------------------//
