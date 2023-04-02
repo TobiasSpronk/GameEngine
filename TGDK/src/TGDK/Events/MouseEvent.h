@@ -2,7 +2,7 @@
 
 #include "Event.h"
 #include "..\Core\MouseCodes.h"
-#include <sstream>
+
 namespace tgdk {
 
 	class MouseMovedEvent : public Event

@@ -1,6 +1,5 @@
 #pragma once
-
-#include <cstdint>
+#include "tgdk_pch.h"
 
 namespace tgdk
 {

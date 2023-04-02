@@ -4,6 +4,18 @@
     <Filter Include="TGDK">
       <UniqueIdentifier>{6F568C7C-5B8D-8D0D-047A-7310F08F090F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TGDK\Core">
+      <UniqueIdentifier>{27D817D6-9342-CC4C-DC80-7DF2482AAAA1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGDK\Events">
+      <UniqueIdentifier>{738F90C0-DF44-09B6-6839-038DD4EDFFB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGDK\Platform">
+      <UniqueIdentifier>{A33F1043-0F00-8C79-D83A-D5F644BAD055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGDK\Platform\Windows">
+      <UniqueIdentifier>{DDDC28A4-4949-E49E-123D-7CFC7E680607}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\TGDK.h" />
@@ -13,17 +25,37 @@
     <ClInclude Include="src\TGDK\Core.h">
       <Filter>TGDK</Filter>
     </ClInclude>
+    <ClInclude Include="src\TGDK\Core\KeyCodes.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Core\MouseCodes.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\TGDK\EntryPoint.h">
       <Filter>TGDK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Events\ApplicationEvent.h">
+      <Filter>TGDK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Events\Event.h">
+      <Filter>TGDK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Events\KeyEvent.h">
+      <Filter>TGDK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Events\MouseEvent.h">
+      <Filter>TGDK\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\TGDK\Log.h">
       <Filter>TGDK</Filter>
     </ClInclude>
-    <ClInclude Include="src\TGDK\Events\Event.h" />
-    <ClInclude Include="src\TGDK\Events\KeyEvent.h" />
-    <ClInclude Include="src\TGDK\Events\MouseEvent.h" />
-    <ClInclude Include="src\TGDK\Core\KeyCodes.h" />
-    <ClInclude Include="src\TGDK\Core\MouseCodes.h" />
+    <ClInclude Include="src\TGDK\Platform\Windows\WindowsWindow.h">
+      <Filter>TGDK\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Window.h">
+      <Filter>TGDK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tgdk_pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\TGDK\Application.cpp">
@@ -32,6 +64,9 @@
     <ClCompile Include="src\TGDK\Log.cpp">
       <Filter>TGDK</Filter>
     </ClCompile>
-    <ClCompile Include="src\TGDK\Events\ApplicationEvent.h" />
+    <ClCompile Include="src\TGDK\Platform\Windows\WindowsWindow.cpp">
+      <Filter>TGDK\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tgdk_pch.cpp" />
   </ItemGroup>
 </Project>

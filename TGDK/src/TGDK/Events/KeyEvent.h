@@ -1,8 +1,7 @@
 #pragma once
-
 #include "Event.h"
 #include "..\Core\KeyCodes.h"
-#include <sstream>
+
 namespace tgdk{
 
 	class KeyEvent : public Event

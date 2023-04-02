@@ -1,5 +1,5 @@
 #pragma once
-
+#include "tgdk_pch.h"
 
 #ifdef TGDK_PLATFORM_WINDOWS
 

@@ -4,6 +4,13 @@ workspace "TGDK"
 	startproject "Sandbox"
 outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "TGDK/vendor/GLFW/include"
+-- include the premake5 files like in C++
+include "TGDK/vendor/GLFW"
+
+
 project "TGDK"
     location "TGDK"
     kind "SharedLib"
@@ -11,6 +18,11 @@ project "TGDK"
 	
     targetdir ("bin/" .. outputDir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputDir .. "/%{prj.name}")
+
+    -- precompiled Header
+    pchheader "tgdk_pch.h"
+	pchsource "TGDK/src/tgdk_pch.cpp"
+
 
     files 
     { 
@@ -20,9 +32,16 @@ project "TGDK"
     includedirs
     {
         "%{prj.name}/src",
-        "TGDK/vendor/spdlog/include"
+        "TGDK/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
     }
 
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
+    }
+    
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"

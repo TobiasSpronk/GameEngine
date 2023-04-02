@@ -3,7 +3,6 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
-#include <memory>
 namespace tgdk
 {
 	class TGDK_API Log
