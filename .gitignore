@@ -10,6 +10,8 @@ TODO*.*
 ################################
 build/
 bin/
+TGDK/vendor/GLFW/bin/
+TGDK/vendor/GLFW/bin-int/
 bin-int/
 out/
 html/
