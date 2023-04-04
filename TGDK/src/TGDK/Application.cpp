@@ -20,7 +20,10 @@ namespace tgdk
 
 	void Application::OnEvent(Event& e) 
 	{
-		TGDK_CORE_INFO("{0}", e);
+
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+		TGDK_CORE_TRACE("{0}", e);
 	}
 
 	void Application::run()
@@ -32,4 +35,11 @@ namespace tgdk
 			m_Window->OnUpdate();
 		}
 	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
+	}
+
 }

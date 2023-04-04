@@ -8,7 +8,7 @@ outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "TGDK/vendor/GLFW/include"
 -- include the premake5 files like in C++
-include "TGDK/vendor/GLFW"
+include "TGDK/vendor"
 
 
 project "TGDK"

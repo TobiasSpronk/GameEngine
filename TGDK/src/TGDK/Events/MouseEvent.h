@@ -30,11 +30,11 @@ namespace tgdk {
 	class MouseScrolledEvent : public Event
 	{
 	public:
-		MouseScrolledEvent(const float xOffset, const float yOffset)
-			: m_XOffset(xOffset), m_YOffset(yOffset) {}
+		MouseScrolledEvent(const double x_offset, const double y_offset)
+			: m_x_offset(x_offset), m_y_offset(y_offset) {}
 
-		float GetXOffset() const { return m_XOffset; }
-		float GetYOffset() const { return m_YOffset; }
+		double GetXOffset() const { return m_x_offset; }
+		double GetYOffset() const { return m_y_offset; }
 
 		std::string ToString() const override
 		{
@@ -46,7 +46,7 @@ namespace tgdk {
 		EVENT_CLASS_TYPE(MouseScrolled)
 			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
-		float m_XOffset, m_YOffset;
+		float m_x_offset, m_y_offset;
 	};
 
 	class MouseButtonEvent : public Event
