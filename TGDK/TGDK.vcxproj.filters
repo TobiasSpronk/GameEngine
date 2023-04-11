@@ -19,16 +19,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\TGDK.h" />
-    <ClInclude Include="src\TGDK\Application.h">
-      <Filter>TGDK</Filter>
-    </ClInclude>
     <ClInclude Include="src\TGDK\Core.h">
       <Filter>TGDK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Core\Application.h">
+      <Filter>TGDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\TGDK\Core\KeyCodes.h">
       <Filter>TGDK\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\TGDK\Core\Layer.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Core\LayerStack.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Core\Log.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\TGDK\Core\MouseCodes.h">
+      <Filter>TGDK\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TGDK\Core\Window.h">
       <Filter>TGDK\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\TGDK\EntryPoint.h">
@@ -46,23 +58,23 @@
     <ClInclude Include="src\TGDK\Events\MouseEvent.h">
       <Filter>TGDK\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\TGDK\Log.h">
-      <Filter>TGDK</Filter>
-    </ClInclude>
     <ClInclude Include="src\TGDK\Platform\Windows\WindowsWindow.h">
       <Filter>TGDK\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TGDK\Window.h">
-      <Filter>TGDK</Filter>
     </ClInclude>
     <ClInclude Include="src\tgdk_pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\TGDK\Application.cpp">
-      <Filter>TGDK</Filter>
+    <ClCompile Include="src\TGDK\Core\Application.cpp">
+      <Filter>TGDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\TGDK\Log.cpp">
-      <Filter>TGDK</Filter>
+    <ClCompile Include="src\TGDK\Core\Layer.cpp">
+      <Filter>TGDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TGDK\Core\LayerStack.cpp">
+      <Filter>TGDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TGDK\Core\Log.cpp">
+      <Filter>TGDK\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\TGDK\Platform\Windows\WindowsWindow.cpp">
       <Filter>TGDK\Platform\Windows</Filter>

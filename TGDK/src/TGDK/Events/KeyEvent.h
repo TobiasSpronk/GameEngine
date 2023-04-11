@@ -1,6 +1,6 @@
 #pragma once
 #include "Event.h"
-#include "..\Core\KeyCodes.h"
+#include "TGDK/Core/KeyCodes.h"
 
 namespace tgdk{
 

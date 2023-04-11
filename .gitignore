@@ -10,8 +10,12 @@ TODO*.*
 ################################
 build/
 bin/
-TGDK/vendor/GLFW/bin/
-TGDK/vendor/GLFW/bin-int/
+
+/TGDK/vendor/Glad/
+/TGDK/vendor/ImGui/
+/TGDK/vendor/imgui/
+/TGDK/vendor/spdlog/
+/TGDK/vendor/GLFW/
 bin-int/
 out/
 html/
@@ -155,3 +159,4 @@ ipch/
 *.e2e
 TGDK/TGDK.vcxproj
 TGDK/TGDK.vcxproj.filters
+/TGDK/TGDK.vcxproj

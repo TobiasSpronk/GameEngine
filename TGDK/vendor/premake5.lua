@@ -115,3 +115,88 @@ project "GLFW"
 		runtime "Release"
 		optimize "on"
         symbols "off"
+
+
+
+
+project "Glad"
+	location "%{prj.name}"
+	kind "StaticLib"
+	language "C"
+	staticruntime "off"
+
+
+	targetdir ("%{prj.name}/bin/" .. outputDir .. "/%{prj.name}")
+	objdir ("%{prj.name}/bin-int/" .. outputDir .. "/%{prj.name}")
+
+	files
+	{
+        "%{prj.name}/include/glad/glad.h",
+        "%{prj.name}/include/KHR/khrplatform.h",
+        "%{prj.name}/src/glad.c"
+	}
+
+	includedirs
+    {
+        "%{prj.name}/include",
+    }
+
+
+	filter "system:windows"
+		systemversion "latest"
+
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
+
+
+
+project "ImGui"
+	location "%{prj.name}"
+	kind "StaticLib"
+	language "C++"
+	staticruntime "off"
+
+	targetdir ("%{prj.name}/bin/" .. outputDir .. "/%{prj.name}")
+	objdir ("%{prj.name}/bin-int/" .. outputDir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/imconfig.h",
+		"%{prj.name}/imgui.h",
+		"%{prj.name}/imgui.cpp",
+		"%{prj.name}/imgui_draw.cpp",
+		"%{prj.name}/imgui_internal.h",
+		"%{prj.name}/imgui_tables.cpp",
+		"%{prj.name}/imgui_widgets.cpp",
+		"%{prj.name}/imstb_rectpack.h",
+		"%{prj.name}/imstb_textedit.h",
+		"%{prj.name}/imstb_truetype.h",
+		"%{prj.name}/imgui_demo.cpp"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		cppdialect "C++17"
+
+	filter "system:linux"
+		pic "On"
+		systemversion "latest"
+		cppdialect "C++17"
+
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+		symbols "off"

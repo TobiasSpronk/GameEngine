@@ -4,3 +4,6 @@
 [submodule "TGDK/vendor/GLFW"]
 	path = TGDK/vendor/GLFW
 	url = https://github.com/glfw/glfw
+[submodule "TGDK/vendor/imgui"]
+	path = TGDK/vendor/imgui
+	url = https://github.com/ocornut/imgui

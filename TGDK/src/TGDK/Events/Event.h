@@ -1,5 +1,5 @@
 #pragma once
-#include "..\Core.h"
+#include "TGDK/Core.h"
 
 
 namespace tgdk {

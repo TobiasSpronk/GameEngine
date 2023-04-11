@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.h"
-#include "..\Core\MouseCodes.h"
+#include "TGDK/Core/MouseCodes.h"
 
 namespace tgdk {
 

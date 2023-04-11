@@ -7,6 +7,8 @@ outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "TGDK/vendor/GLFW/include"
+IncludeDir["Glad"] = "TGDK/vendor/Glad/include"
+IncludeDir["ImGui"] = "TGDK/vendor/imgui/include"
 -- include the premake5 files like in C++
 include "TGDK/vendor"
 
@@ -33,12 +35,16 @@ project "TGDK"
     {
         "%{prj.name}/src",
         "TGDK/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
+        "ImGui",
         "opengl32.lib"
     }
     
@@ -50,7 +56,8 @@ project "TGDK"
         defines
         {
             "TGDK_PLATFORM_WINDOWS",
-            "TGDK_BUILD_DLL"
+            "TGDK_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -60,15 +67,18 @@ project "TGDK"
     
     filter "configurations:Debug"
         defines "TGDK_DEBUG"
+		buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "TGDK_RELEASE"
-        symbols "On"
+        buildoptions "/MD"
+		symbols "On"
 
     filter "configurations:Dist"
         defines "TGDK_DIST"
-        symbols "On"
+        buildoptions "/MD"
+		symbols "On"
     
    
 project "Sandbox"
@@ -107,15 +117,18 @@ project "Sandbox"
     
     filter "configurations:Debug"
         defines "TGDK_DEBUG"
+		buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "TGDK_RELEASE"
+		buildoptions "/MD"
         symbols "On"
 
     filter "configurations:Dist"
         defines "TGDK_DIST"
-        symbols "On"
+        buildoptions "/MD"
+		symbols "On"
 		
 		
 newaction {
