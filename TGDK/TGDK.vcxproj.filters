@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="TGDK">
       <UniqueIdentifier>{6F568C7C-5B8D-8D0D-047A-7310F08F090F}</UniqueIdentifier>
     </Filter>
@@ -10,14 +19,20 @@
     <Filter Include="TGDK\Events">
       <UniqueIdentifier>{738F90C0-DF44-09B6-6839-038DD4EDFFB9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="TGDK\Platform">
-      <UniqueIdentifier>{A33F1043-0F00-8C79-D83A-D5F644BAD055}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="TGDK\Platform\Windows">
-      <UniqueIdentifier>{DDDC28A4-4949-E49E-123D-7CFC7E680607}</UniqueIdentifier>
+    <Filter Include="TGDK\ImGui">
+      <UniqueIdentifier>{D9A27D99-C55A-BFE6-2E62-98421A395AD7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\TGDK.h" />
     <ClInclude Include="src\TGDK\Core.h">
       <Filter>TGDK</Filter>
@@ -58,12 +73,18 @@
     <ClInclude Include="src\TGDK\Events\MouseEvent.h">
       <Filter>TGDK\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\TGDK\Platform\Windows\WindowsWindow.h">
-      <Filter>TGDK\Platform\Windows</Filter>
+    <ClInclude Include="src\TGDK\ImGui\ImGuiLayer.h">
+      <Filter>TGDK\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\tgdk_pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\TGDK\Core\Application.cpp">
       <Filter>TGDK\Core</Filter>
     </ClCompile>
@@ -76,8 +97,8 @@
     <ClCompile Include="src\TGDK\Core\Log.cpp">
       <Filter>TGDK\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\TGDK\Platform\Windows\WindowsWindow.cpp">
-      <Filter>TGDK\Platform\Windows</Filter>
+    <ClCompile Include="src\TGDK\ImGui\ImGuiLayer.cpp">
+      <Filter>TGDK\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\tgdk_pch.cpp" />
   </ItemGroup>

@@ -13,7 +13,7 @@ bin/
 
 /TGDK/vendor/Glad/
 /TGDK/vendor/ImGui/
-/TGDK/vendor/imgui/
+/TGDK/vendor/imgui/*
 /TGDK/vendor/spdlog/
 /TGDK/vendor/GLFW/
 bin-int/

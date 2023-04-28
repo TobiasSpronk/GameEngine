@@ -28,6 +28,8 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new tgdk::ImGuiLayer());
+		
 	}
 	~Sandbox()
 	{
